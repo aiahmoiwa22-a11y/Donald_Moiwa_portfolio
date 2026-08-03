@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Donald Tech — Software Engineer, Web Developer, Video Editor, Photographer & Model. Premium personal portfolio.">
+  <meta name="theme-color" content="#0a0a1a">
+  <title>Donald Tech | Software Engineer &amp; Creative Visual Artist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="script.css">
+</head>
+<body>
+
+
+  <!-- PRELOADER -->
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__logo">
+      <span class="preloader__mark">DT</span>
+      <span class="preloader__ring"></span>
+    </div>
+  </div>
+
+  <!-- ANIMATED BACKGROUND -->
+  
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-fx__grid"></div>
+    <div class="bg-fx__glow bg-fx__glow--1"></div>
+    <div class="bg-fx__glow bg-fx__glow--2"></div>
+    <div class="bg-fx__glow bg-fx__glow--3"></div>
+    <span class="floating-shape floating-shape--1"></span>
+    <span class="floating-shape floating-shape--2"></span>
+    <span class="floating-shape floating-shape--3"></span>
+    <span class="floating-shape floating-shape--4"></span>
+    <span class="floating-shape floating-shape--5"></span>
+  </div>
+
+
+  <!-- HEADER / NAVIGATION -->
+  
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a href="#home" class="brand" aria-label="Donald Tech home">
+        <span class="brand__mark">DT</span>
+        <span class="brand__text">DONALD <strong>TECH</strong></span>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link active" data-nav>Home</a></li>
+          <li><a href="#about" class="nav__link" data-nav>About</a></li>
+          <li><a href="#skills" class="nav__link" data-nav>Skills</a></li>
+          <li><a href="#projects" class="nav__link" data-nav>Projects</a></li>
+          <li><a href="#photography" class="nav__link" data-nav>Photography</a></li>
+          <li><a href="#modeling" class="nav__link" data-nav>Modeling</a></li> 
+          <li><a href="#contact" class="nav__link" data-nav>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="#contact" class="btn btn--gradient btn--sm">
+          <span>Let's Connect</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================= -->
+  <!-- MOBILE MENU -->
+  <!-- ========================= -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul class="mobile-menu__list">
+      <li><a href="#home" data-nav-mobile>Home</a></li>
+      <li><a href="#about" data-nav-mobile>About</a></li>
+      <li><a href="#skills" data-nav-mobile>Skills</a></li>
+      <li><a href="#projects" data-nav-mobile>Projects</a></li>
+      <li><a href="#photography" data-nav-mobile>Photography</a></li>
+      <li><a href="#modeling" data-nav-mobile>Modeling</a></li> 
+      <li><a href="#contact" data-nav-mobile>Contact</a></li>
+    </ul>
+    <div class="mobile-menu__social">
+      <a href="https://www.instagram.com/donaldtech_?igshid=NGVhZGRHZGMyMw%3D%3D" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/aiah-donald-moiwa-23a908342/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href=" https://www.tiktok.com/@yannahs.tv?_r=" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ========================= -->
+    <!-- HOME SECTION -->
+    <!-- ========================= -->
+    <section id="home" class="section hero">
+      <div class="container hero__grid">
+
+        <div class="hero__content" data-reveal>
+          <span class="eyebrow"><span class="eyebrow__dot"></span>Hi, I'm Aiah Donald Moiwa <span class="wave">👋</span></span>
+
+          <h1 class="hero__title">
+            SOFTWARE ENGINEER<br>
+            BUILDING <span class="text-gradient" id="typedTarget"></span><span class="typed-cursor" aria-hidden="true">|</span>
+          </h1>
+
+          <p class="hero__desc">
+            I design and develop scalable, efficient and user-friendly software applications —
+            then bring the story to life through cinematic video, photography and modeling.
+          </p>
+
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn--gradient">
+              <span>View My Projects</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+            <a href="assets/donald-tech-resume.pdf" class="btn btn--outline" download>
+              <span>Download Resume</span>
+              <i class="fa-solid fa-arrow-down-to-line"></i>
+            </a>
+          </div>
+
+          <div class="hero__stack">
+            <span class="hero__stack-icon" title="React"><i class="fa-brands fa-react"></i></span>
+            <span class="hero__stack-icon" title="JavaScript"><i class="fa-brands fa-square-js"></i></span>
+            <span class="hero__stack-icon" title="Node.js"><i class="fa-brands fa-node-js"></i></span>
+            <span class="hero__stack-icon" title="python"><i class="fa-brands fa-python"></i></span>
+            <span class="hero__stack-icon" title="c#"><i class="fa-brands fa-csharp"></i></span>
+            <span class="hero__stack-icon" title="c++"><i class="fa-solid fa-wind"></i></span>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-reveal data-reveal-delay="150">
+          <div class="hero__orb" aria-hidden="true"></div>
+          <div class="glass-card hero__device">
+            <div class="device__bar">
+              <span></span><span></span><span></span>
+            </div>
+            <pre class="device__code"><code>const engineer = {
+  name: "Donald",
+  role: "Software Engineer",
+  passions: [
+    "code", "film", "light",
+    "form", "story"
+  ],
+  build: () => "impact"
+};</code></pre>
+          </div>
+
+          <div class="glass-card floating-stat floating-stat--top" data-counter-card>
+            <span class="floating-stat__num" data-counter data-target="5">0</span><span>+</span>
+            <span class="floating-stat__label">Projects Completed</span>
+          </div>
+          <div class="glass-card floating-stat floating-stat--bottom" data-counter-card>
+            <span class="floating-stat__num" data-counter data-target="2">0</span><span>+</span>
+            <span class="floating-stat__label">Years Experience</span>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span class="scroll-cue__mouse"><span class="scroll-cue__dot"></span></span>
+        <span class="scroll-cue__text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ========================= -->
+    <!-- ABOUT SECTION -->
+    <!-- ========================= -->
+    <section id="about" class="section about">
+      <div class="container about__grid">
+
+        <div class="about__visual" data-reveal>
+          <div class="about__photo-frame">
+            <img src=" images/Hero background.jpg" alt="Portrait of Donald Tech" class="about__photo" loading="lazy">
+          </div>
+          <div class="glass-card about__badge">
+            <span class="about__badge-num">2+</span>
+            <span class="about__badge-label">Years<br>Experience</span>
+          </div>
+        </div>
+
+        <div class="about__content" data-reveal data-reveal-delay="150">
+          <span class="eyebrow eyebrow--pill">Get to know me</span>
+          <h2 class="section-title">About <span class="text-gradient">Me.</span></h2>
+          <p class="section-desc">
+            I'm a passionate Software Engineer with a creative eye for design, video and visual
+            storytelling. I build digital products that function beautifully, capture moments
+            behind the lens, edit stories that connect, and bring ideas to life on and off the screen.
+          </p>
+
+          <div class="stat-grid">
+            <div class="glass-card stat-card">
+              <span class="stat-card__num" data-counter data-target="2">0</span><span class="stat-card__plus">+</span>
+              <span class="stat-card__label">Years Experience</span>
+            </div>
+            <div class="glass-card stat-card">
+              <span class="stat-card__num" data-counter data-target="20">0</span><span class="stat-card__plus">+</span>
+              <span class="stat-card__label">Projects Completed</span>
+            </div>
+            <div class="glass-card stat-card">
+              <span class="stat-card__num" data-counter data-target="100">0</span><span class="stat-card__plus">%</span>
+              <span class="stat-card__label">Client Satisfaction</span>
+            </div>
+            <div class="glass-card stat-card">
+              <span class="stat-card__num" data-counter data-target="3">0</span><span class="stat-card__plus">+</span>
+              <span class="stat-card__label">Skills Mastered</span>
+            </div>
+          </div>
+
+          <div class="about__cta">
+            <a href="assets/donald-tech-resume.pdf" class="btn btn--gradient" download>
+              <span>Download Resume</span>
+              <i class="fa-solid fa-arrow-down-to-line"></i>
+            </a>
+            <a href="#contact" class="btn btn--ghost">
+              <span>Let's Connect</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <ul class="about__more">
+            <li><i class="fa-solid fa-code"></i><span>Coding</span></li>
+            <li><i class="fa-solid fa-film"></i><span>Video Editing</span></li>
+            <li><i class="fa-solid fa-camera"></i><span>Photography</span></li>
+            <li><i class="fa-solid fa-person-walking"></i><span>Modeling</span></li>
+            <li><i class="fa-solid fa-plane"></i><span>Travel</span></li>
+            <li><i class="fa-solid fa-music"></i><span>Music</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SKILLS SECTION -->
+    <!-- ========================= -->
+    <section id="skills" class="section skills">
+      <div class="container">
+
+        <div class="section-head" data-reveal>
+          <span class="eyebrow eyebrow--pill">What I Do</span>
+          <h2 class="section-title">My Skills &amp; <span class="text-gradient">Expertise</span></h2>
+          <p class="section-desc">I combine creativity and technology to deliver solutions that are not only functional but also visually stunning.</p>
+        </div>
+
+        <div class="skills__layout">
+
+          <div class="skills__group" data-reveal>
+            <h3 class="skills__group-title"><i class="fa-solid fa-code"></i> Programming Skills</h3>
+            <div class="skill-bars">
+
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span class="skill-bar__icon skill-bar__icon--js"><i class="fa-brands fa-js"></i></span>
+                  <span class="skill-bar__name">JavaScript</span>
+                  <span class="skill-bar__pct">90%</span>
+                </div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-skill="90" style="--w:90%"></div></div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span class="skill-bar__icon skill-bar__icon--ts">TS</span>
+                  <span class="skill-bar__name">C++</span>
+                  <span class="skill-bar__pct">85%</span>
+                </div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-skill="85" style="--w:85%"></div></div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span class="skill-bar__icon skill-bar__icon--react"><i class="fa-brands fa-react"></i></span>
+                  <span class="skill-bar__name">React</span>
+                  <span class="skill-bar__pct">90%</span>
+                </div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-skill="90" style="--w:90%"></div></div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span class="skill-bar__icon skill-bar__icon--node"><i class="fa-brands fa-node-js"></i></span>
+                  <span class="skill-bar__name">Node.js</span>
+                  <span class="skill-bar__pct">85%</span>
+                </div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-skill="85" style="--w:85%"></div></div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span class="skill-bar__icon skill-bar__icon--python"><i class="fa-brands fa-python"></i></span>
+                  <span class="skill-bar__name">Python</span>
+                  <span class="skill-bar__pct">80%</span>
+                </div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-skill="80" style="--w:80%"></div></div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span class="skill-bar__icon skill-bar__icon--html"><i class="fa-brands fa-html5"></i></span>
+                  <span class="skill-bar__name">HTML5</span>
+                  <span class="skill-bar__pct">95%</span>
+                </div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-skill="95" style="--w:95%"></div></div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span class="skill-bar__icon skill-bar__icon--css"><i class="fa-brands fa-css3-alt"></i></span>
+                  <span class="skill-bar__name">CSS3</span>
+                  <span class="skill-bar__pct">90%</span>
+                </div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-skill="90" style="--w:90%"></div></div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span class="skill-bar__icon skill-bar__icon--tw"><i class="fa-solid fa-wind"></i></span>
+                  <span class="skill-bar__name">C#</span>
+                  <span class="skill-bar__pct">85%</span>
+                </div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-skill="85" style="--w:85%"></div></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="skills__group" data-reveal data-reveal-delay="100">
+            <h3 class="skills__group-title"><i class="fa-solid fa-star"></i> Creative &amp; Visual Skills</h3>
+            <div class="skill-bars">
+
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span class="skill-bar__icon skill-bar__icon--edit"><i class="fa-solid fa-clapperboard"></i></span>
+                  <span class="skill-bar__name">Video Editing</span>
+                  <span class="skill-bar__pct">90%</span>
+                </div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-skill="90" style="--w:90%"></div></div>
+                <span class="skill-bar__tools">Premiere Pro, After Effects, CapCut, DaVinci Resolve</span>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span class="skill-bar__icon skill-bar__icon--photo"><i class="fa-solid fa-camera-retro"></i></span>
+                  <span class="skill-bar__name">Photography</span>
+                  <span class="skill-bar__pct">85%</span>
+                </div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-skill="85" style="--w:85%"></div></div>
+                <span class="skill-bar__tools">Photoshop, Lightroom, Capture One</span>
+              </div> --
+
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span class="skill-bar__icon skill-bar__icon--model"><i class="fa-solid fa-person-walking"></i></span>
+                  <span class="skill-bar__name">Modeling</span>
+                  <span class="skill-bar__pct">80%</span>
+                </div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-skill="80" style="--w:80%"></div></div>
+                <span class="skill-bar__tools">Fashion, Commercial, Lifestyle Modeling</span>
+              </div> 
+
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span class="skill-bar__icon skill-bar__icon--uiux"><i class="fa-solid fa-pen-ruler"></i></span>
+                  <span class="skill-bar__name">UI/UX Design</span>
+                  <span class="skill-bar__pct">88%</span>
+                </div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-skill="88" style="--w:88%"></div></div>
+                <span class="skill-bar__tools">Figma, Adobe XD, Prototyping</span>
+              </div>
+
+            </div>
+
+            <h3 class="skills__group-title skills__group-title--tools"><i class="fa-solid fa-toolbox"></i> Tools &amp; Platforms</h3>
+            <div class="tool-grid">
+              <div class="glass-card tool-chip"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+              <div class="glass-card tool-chip"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+              <div class="glass-card tool-chip"><i class="fa-solid fa-code"></i><span>VS Code</span></div>
+              <div class="glass-card tool-chip"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
+              <div class="glass-card tool-chip"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+              <div class="glass-card tool-chip"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="glass-card upload-banner" data-reveal>
+          <div class="upload-banner__info">
+            <span class="upload-banner__icon"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+            <div>
+              <h4>Model Portfolio</h4>
+              <p>Upload your best photos and build your modeling portfolio.</p>
+            </div>
+          </div>
+          <div class="upload-banner__action">
+            <label class="btn btn--gradient btn--sm" for="skillsUploadInput">
+              <span>Upload Photos</span>
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </label>
+            <input type="file" id="skillsUploadInput" accept="image/png, image/jpeg" multiple hidden data-upload-input>
+            <span class="upload-banner__hint">JPG, PNG up to 10MB</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- PROJECTS SECTION -->
+    <!-- ========================= -->
+    <section id="projects" class="section projects">
+      <div class="container">
+
+        <div class="section-head" data-reveal>
+          <span class="eyebrow eyebrow--pill">My Work</span>
+          <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+          <p class="section-desc">A selection of my recent work across web development, design, video and more.</p>
+        </div>
+
+        <div class="filter-bar" role="tablist" aria-label="Project filters" data-reveal>
+          <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="web">Web Development</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="video">Video Editing</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="photo">Photography</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="model">Modeling</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+
+          <article class="glass-card project-card" data-category="web" data-reveal>
+            <div class="project-card__media">
+              <img src="https://placehold.co/640x480/141428/8b7bff?text=DevPortfolio" alt="DevPortfolio screenshot" loading="lazy">
+              <span class="project-card__tag project-card__tag--web">Web Development</span>
+              <a href="#" class="project-card__link" aria-label="View DevPortfolio project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-card__body">
+              <h3>DevPortfolio</h3>
+              <p>A personal portfolio website to showcase my work and skills.</p>
+              <ul class="project-card__stack">
+                <li>Next.js</li><li>Tailwind CSS</li><li>TypeScript</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="glass-card project-card" data-category="video" data-reveal data-reveal-delay="80">
+            <div class="project-card__media">
+              <img src="images/5990264705794116946_121.jpg" alt="Cinematic travel vlog thumbnail" loading="lazy">
+              <span class="project-card__tag project-card__tag--video">Video Editing</span>
+              <a href="#" class="project-card__link" aria-label="View Cinematic Travel Vlog project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-card__body">
+              <h3>Cinematic AI movie</h3>
+              <p>Created a cinematic AI movie</p>
+              <ul class="project-card__stack">
+                <li>CapCut</li><li>AI tools</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="glass-card project-card" data-category="photo" data-reveal data-reveal-delay="160">
+            <div class="project-card__media">
+              <img src="https://placehold.co/640x480/141428/7bffde?text=Urban+Photoshoot" alt="Urban photoshoot thumbnail" loading="lazy">
+              <span class="project-card__tag project-card__tag--photo">Photography</span>
+              <a href="#" class="project-card__link" aria-label="View Urban Photoshoot project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-card__body">
+              <h3>Urban Photoshoot</h3>
+              <p>Captured lifestyle and urban moments in the city.</p>
+              <ul class="project-card__stack">
+                <li>Photoshop</li><li>Lightroom</li>
+              </ul>
+            </div>
+          </article> -->
+
+          <article class="glass-card project-card" data-category="model" data-reveal data-reveal-delay="240">
+            <div class="project-card__media">
+              <img src="https://placehold.co/640x480/141428/ffd27b?text=Fashion+Campaign" alt="Fashion campaign thumbnail" loading="lazy">
+              <span class="project-card__tag project-card__tag--model">Modeling</span>
+              <a href="#" class="project-card__link" aria-label="View Fashion Campaign project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-card__body">
+              <h3>Fashion Campaign</h3>
+              <p>Commercial photoshoot for a fashion brand campaign.</p>
+              <ul class="project-card__stack">
+                <li>Editorial</li><li>Commercial</li><li>Lifestyle</li>
+              </ul>
+            </div>
+          </article> 
+
+          <article class="glass-card project-card" data-category="web" data-reveal>
+            <div class="project-card__media">
+              <img src="https://placehold.co/640x480/141428/8b7bff?text=TaskFlow" alt="TaskFlow app screenshot" loading="lazy">
+              <span class="project-card__tag project-card__tag--web">Web Development</span>
+              <a href="#" class="project-card__link" aria-label="View TaskFlow project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-card__body">
+              <h3>TaskFlow</h3>
+              <p>A productivity tool for managing tasks, teams and projects.</p>
+              <ul class="project-card__stack">
+                <li>React</li><li>Node.js</li><li>MongoDB</li>
+              </ul>
+            </div>
+          </article> 
+
+          <article class="glass-card project-card" data-category="web" data-reveal data-reveal-delay="80">
+            <div class="project-card__media">
+              <img src="https://placehold.co/640x480/141428/8b7bff?text=ShopEase" alt="ShopEase e-commerce screenshot" loading="lazy">
+              <span class="project-card__tag project-card__tag--web">Web Development</span>
+              <a href="#" class="project-card__link" aria-label="View ShopEase project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-card__body">
+              <h3>ShopEase</h3>
+              <p>An e-commerce platform with a modern UI and secure payments.</p>
+              <ul class="project-card__stack">
+                <li>React</li><li>Node.js</li><li>MongoDB</li>
+              </ul>
+            </div>
+          </article>
+
+        </div> 
+
+        <div class="projects__more" data-reveal>
+          <button class="btn btn--gradient" id="viewMoreProjectsBtn">
+            <span>View More Projects</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+        </div>
+
+      </div>
+    </section> 
+
+    <!-- ========================= -->
+    <!-- PHOTOGRAPHY SECTION -->
+    <!-- ========================= -->
+    <!-- <section id="photography" class="section photography">
+      <div class="container">
+
+        <div class="section-head" data-reveal>
+          <span class="eyebrow eyebrow--pill">Behind The Lens</span>
+          <h2 class="section-title">Photography <span class="text-gradient">Gallery</span></h2>
+          <p class="section-desc">A curated collection of moments — portraits, streets, light and life — captured through my lens.</p>
+        </div>
+
+        <div class="filter-bar" role="tablist" aria-label="Photography filters" data-reveal>
+          <button class="filter-btn active" role="tab" aria-selected="true" data-photo-filter="all">All</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-photo-filter="portrait">Portrait</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-photo-filter="street">Street</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-photo-filter="nature">Nature</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-photo-filter="event">Event</button>
+        </div> -->
+
+        <!-- <div class="gallery-grid" id="galleryGrid">
+          <figure class="gallery-item" data-category="portrait" data-reveal>
+            <img src="https://placehold.co/500x650/141428/8b7bff?text=Portrait+01" alt="Portrait photography 01" loading="lazy">
+            <figcaption><span>Portrait</span><i class="fa-solid fa-magnifying-glass-plus"></i></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="street" data-reveal data-reveal-delay="60">
+            <img src="https://placehold.co/500x650/141428/ff7bcf?text=Street+01" alt="Street photography 01" loading="lazy">
+            <figcaption><span>Street</span><i class="fa-solid fa-magnifying-glass-plus"></i></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="nature" data-reveal data-reveal-delay="120">
+            <img src="https://placehold.co/500x650/141428/7bffde?text=Nature+01" alt="Nature photography 01" loading="lazy">
+            <figcaption><span>Nature</span><i class="fa-solid fa-magnifying-glass-plus"></i></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="event" data-reveal data-reveal-delay="180">
+            <img src="https://placehold.co/500x650/141428/ffd27b?text=Event+01" alt="Event photography 01" loading="lazy">
+            <figcaption><span>Event</span><i class="fa-solid fa-magnifying-glass-plus"></i></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="portrait" data-reveal>
+            <img src="https://placehold.co/500x650/141428/8b7bff?text=Portrait+02" alt="Portrait photography 02" loading="lazy">
+            <figcaption><span>Portrait</span><i class="fa-solid fa-magnifying-glass-plus"></i></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="street" data-reveal data-reveal-delay="60">
+            <img src="https://placehold.co/500x650/141428/ff7bcf?text=Street+02" alt="Street photography 02" loading="lazy">
+            <figcaption><span>Street</span><i class="fa-solid fa-magnifying-glass-plus"></i></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="nature" data-reveal data-reveal-delay="120">
+            <img src="https://placehold.co/500x650/141428/7bffde?text=Nature+02" alt="Nature photography 02" loading="lazy">
+            <figcaption><span>Nature</span><i class="fa-solid fa-magnifying-glass-plus"></i></figcaption>
+          </figure>
+          <figure class="gallery-item" data-category="event" data-reveal data-reveal-delay="180">
+            <img src="https://placehold.co/500x650/141428/ffd27b?text=Event+02" alt="Event photography 02" loading="lazy">
+            <figcaption><span>Event</span><i class="fa-solid fa-magnifying-glass-plus"></i></figcaption>
+          </figure>
+        </div>
+      </div> 
+
+      <!-- Lightbox -->
+      <!-- <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Close preview"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+        <img src="" alt="" class="lightbox__img" id="lightboxImg">
+        <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- MODELING SECTION -->
+    <!-- ========================= -->
+    <section id="modeling" class="section modeling">
+      <div class="container">
+
+        <div class="section-head" data-reveal>
+          <span class="eyebrow eyebrow--pill">On Camera</span>
+          <h2 class="section-title">Modeling <span class="text-gradient">Portfolio</span></h2>
+          <p class="section-desc">Fashion, commercial and lifestyle modeling work. Placeholder frames below are ready for your professional shots.</p>
+        </div>
+
+        <div class="model-grid">
+          <figure class="glass-card model-card" data-reveal>
+            <div class="model-card__frame">
+              <i class="fa-regular fa-image"></i>
+              <span>Replace with My Modeling Photo</span>
+            </div>
+            <figcaption>Editorial Look 01</figcaption>
+          </figure>
+          <figure class="glass-card model-card" data-reveal data-reveal-delay="60">
+            <div class="model-card__frame">
+              <i class="fa-regular fa-image"></i>
+              <span>Replace with My Modeling Photo</span>
+            </div>
+            <figcaption>Fashion Campaign</figcaption>
+          </figure>
+          <figure class="glass-card model-card" data-reveal data-reveal-delay="120">
+            <div class="model-card__frame">
+              <i class="fa-regular fa-image"></i>
+              <span>Replace with My Modeling Photo</span>
+            </div>
+            <figcaption>Commercial Shoot</figcaption>
+          </figure>
+          <figure class="glass-card model-card" data-reveal data-reveal-delay="180">
+            <div class="model-card__frame">
+              <i class="fa-regular fa-image"></i>
+              <span>Replace with My Modeling Photo</span>
+            </div>
+            <figcaption>Lifestyle Series</figcaption>
+          </figure>
+          <figure class="glass-card model-card" data-reveal>
+            <div class="model-card__frame">
+              <i class="fa-regular fa-image"></i>
+              <span>Replace with My Modeling Photo</span>
+            </div>
+            <figcaption>Studio Portrait</figcaption>
+          </figure>
+          <figure class="glass-card model-card" data-reveal data-reveal-delay="60">
+            <div class="model-card__frame">
+              <i class="fa-regular fa-image"></i>
+              <span>Replace with My Modeling Photo</span>
+            </div>
+            <figcaption>Street Style</figcaption>
+          </figure>
+        </div>
+
+        <div class="glass-card upload-banner" data-reveal>
+          <div class="upload-banner__info">
+            <span class="upload-banner__icon"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+            <div>
+              <h4>Model Portfolio Upload</h4>
+              <p>Share your best photos and build your professional modeling portfolio.</p>
+            </div>
+          </div>
+          <div class="upload-banner__action">
+            <label class="btn btn--gradient btn--sm" for="modelingUploadInput">
+              <span>Upload Photos</span>
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </label>
+            <input type="file" id="modelingUploadInput" accept="image/png, image/jpeg" multiple hidden data-upload-input>
+            <span class="upload-banner__hint">JPG, PNG up to 10MB</span>
+          </div>
+        </div>
+
+      </div>
+    </section> 
+> 
+
+    <!-- ========================= -->
+    <!-- CONTACT SECTION -->
+    <!-- ========================= -->
+    <section id="contact" class="section contact">
+      <div class="container contact__grid">
+
+        <div class="contact__info" data-reveal>
+          <span class="eyebrow eyebrow--pill">Get in Touch</span>
+          <h2 class="section-title">Let's Work <span class="text-gradient">Together.</span></h2>
+          <p class="section-desc">Have a project in mind or want to collaborate? Feel free to reach out. I'm always open to discussing new opportunities.</p>
+
+          <ul class="contact__list">
+            <li>
+              <span class="contact__icon"><i class="fa-solid fa-envelope"></i></span>
+              <div><strong>Email</strong><a href="mailto:aiahmoiwa22@gmail.com">aiahmoiwa22@gmail.com</a></div>
+            </li>
+            <li>
+              <span class="contact__icon"><i class="fa-solid fa-phone"></i></span>
+              <div><strong>Phone</strong><a href="tel:+79337210103">+79337210103</a></div>
+            </li>
+            <li>
+              <span class="contact__icon"><i class="fa-solid fa-location-dot"></i></span>
+              <div><strong>Location</strong><span>MOSCOW, RUSSIA</span></div>
+            </li>
+            <li>
+              <span class="contact__icon"><i class="fa-regular fa-clock"></i></span>
+              <div><strong>Availability</strong><span>Open to opportunities</span></div>
+            </li>
+          </ul>
+
+          <div class="contact__social">
+            <a href="https://www.instagram.com/moiwa22?igsh=MWMwOXM4Z3cza2tx&utm_source=qr" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="http://www.linkedin.com/in/aiah-moiwa-3b7937400" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://youtube.com/@yannahtvofficial?si=EXZgHGr7IJjip5aK" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/aiah.moiwa?mibextid=LQQz5k" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://github.com/aiahmoiwa22-a11y" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/+79337210103" class="contact__whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i><span>Chat on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="glass-card contact__form-card" data-reveal data-reveal-delay="150">
+          <h3>Send Me a Message</h3>
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label for="cfName">Your Name</label>
+                <input type="text" id="cfName" name="name" placeholder="John Doe" required>
+              </div>
+              <div class="contact-form__field">
+                <label for="cfEmail">Your Email</label>
+                <input type="email" id="cfEmail" name="email" placeholder="john@example.com" required>
+              </div>
+            </div>
+
+            <div class="contact-form__field">
+              <label for="cfSubject">Subject</label>
+              <input type="text" id="cfSubject" name="subject" placeholder="Project Inquiry" required>
+            </div>
+
+            <div class="contact-form__field">
+              <label for="cfMessage">Your Message</label>
+              <textarea id="cfMessage" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--gradient btn--block">
+              <span>Send Message</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <p class="contact-form__status" id="contactFormStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="container">
+        <div class="glass-card map-card" data-reveal>
+          <div class="map-card__placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Google Maps Placeholder — San Francisco, CA, USA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a href="#home" class="brand brand--footer">
+        <span class="brand__mark">DT</span>
+        <span class="brand__text">DONALD <strong>TECH</strong></span>
+      </a>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#photography">Photography</a>
+        <a href="#modeling">Modeling</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="site-footer__social">
+        <a href=" https://www.instagram.com/moiwa22?igsh=MWMwOXM4Z3cza2tx&utm_source=qr" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="http://www.linkedin.com/in/aiah-moiwa-3b7937400" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href=" https://youtube.com/@yannahtvofficial?si=EXZgHGr7IJjip5aK" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.facebook.com/aiah.moiwa?mibextid=LQQz5k" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="mailto:aiahmoiwa22@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="container">
+        <p>&copy; <span id="footerYear"></span> Donald Tech. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>
