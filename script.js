@@ -1,12 +1,3 @@
-/* ==========================================================
-   DONALD TECH — MAIN.JS
-   Vanilla ES6 JavaScript — no dependencies.
-   Powers: preloader, sticky nav, mobile menu, smooth scroll,
-   active nav highlighting, scroll reveal, typing animation,
-   animated counters, skill bars, project filtering, gallery
-   lightbox, contact form validation, back-to-top, button
-   ripple effect, and lazy-load support.
-   ========================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -18,17 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const hidePreloader = () => {
     if (!preloader) return;
     preloader.classList.add('is-hidden');
-    // Remove from DOM after the fade-out transition completes
     window.setTimeout(() => preloader.remove(), 700);
   };
 
-  // Hide once everything (including images/fonts) has loaded,
-  // with a small minimum delay so the animation is perceivable.
+
   window.addEventListener('load', () => {
     window.setTimeout(hidePreloader, 400);
   });
-
-  // Safety net: never let the preloader block the site forever.
   window.setTimeout(hidePreloader, 4000);
 
 
@@ -120,9 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ==========================================================
-     5. ACTIVE NAVIGATION HIGHLIGHTING (scroll-spy)
-     ========================================================== */
+
   const navLinks = document.querySelectorAll('[data-nav]');
   const sections = Array.from(document.querySelectorAll('main .section[id]'));
 
@@ -191,10 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typedTarget = document.getElementById('typedTarget');
 
   const typedPhrases = [
-    'SOLUTIONS.',
-    'EXPERIENCES.',
-    'STORIES.',
-    'INTERFACES.'
+    'SOLUTIONS',
+    'FAST',
+    'EXPERIENCE',
+    'CREATIVITY'
   ];
 
   const runTypingAnimation = (el, phrases) => {
@@ -202,10 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let charIndex = 0;
     let isDeleting = false;
 
-    const TYPE_SPEED = 90;
-    const DELETE_SPEED = 45;
-    const HOLD_DELAY = 1600;
-    const SWAP_DELAY = 400;
+    const TYPE_SPEED = 70;
+    const DELETE_SPEED = 40;
+    const HOLD_DELAY = 1200;
+    const SWAP_DELAY = 300;
 
     const tick = () => {
       const currentPhrase = phrases[phraseIndex];
