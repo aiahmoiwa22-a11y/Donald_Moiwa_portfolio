@@ -49,16 +49,22 @@ window.PORTFOLIO = {
 
   /* ---------------- Hero ---------------- */
   hero: {
+    // The giant two-line title. Keep each word short (8–9 letters max).
+    bigTitle: ["Software", "Engineer"],
+    // Small line above the giant title.
     headline: "Engineering scalable solutions. Building meaningful digital experiences.",
     intro:
-      "I'm a software engineer who builds modern web applications, works through complex problems, and cares about software that is efficient, scalable and pleasant to use.",
-    // Small facts shown on the stacked green cards beside your photo.
-    // Keep each one short. `label` is the bold line, `value` the small one.
+      "I build modern web applications, work through complex problems, and care about software that is efficient, scalable and pleasant to use.",
+    // Cut-out photo (transparent background) shown over the title.
+    cutout: "assets/img/portrait-cutout",
+    // Badge on the right of the photo. Set `show: false` to hide it.
+    badge: { show: true, small: "Available for", big: "Opportunities", note: "Based in Moscow" },
+    // The strip along the bottom of the hero. icon = any name in icons.js.
     cards: [
-      { label: "Software Engineer", value: "Web & applications" },
-      { label: "Moscow, Russia", value: "Based in" },
-      { label: "Open to opportunities", value: "Availability", key: "availability" },
-      { label: "Yannah's Studios", value: "Founder · AI film" },
+      { icon: "code-xml", value: "Focus", label: "Web & applications" },
+      { icon: "layers", value: "Stack", label: "JavaScript · React · Python" },
+      { icon: "clapperboard", value: "Founder", label: "Yannah's Studios" },
+      { icon: "map-pin", value: "Based in", label: "Moscow, Russia" },
     ],
   },
 

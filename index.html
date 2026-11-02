@@ -42,9 +42,9 @@
   <script>document.documentElement.classList.add("js")</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Sans:wght@400..600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Sans:wght@400..600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" media="print" onload="this.media='all'">
-  <link rel="preload" as="image" href="assets/img/portrait.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/img/portrait-cutout.webp" type="image/webp">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -92,26 +92,48 @@
         <g id="veinGroup" fill="none" stroke="url(#veinFade)" stroke-width="1.2"></g>
       </svg>
 
-      <div class="hero__inner wrap">
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="hero__stage wrap">
+        <p class="hero__tagline" data-anim="up" style="--t:2" data-bind="hero.headline"></p>
+
+        <div class="hero__type" data-depth="-14">
+          <h1 class="hero__title" id="heroTitle">
+            <span class="sr-only" data-bind="person.name">Aiah Donald Moiwa</span>
+            <span class="hero__lines" id="heroLines"></span>
+          </h1>
+        </div>
+
+        <figure class="hero__figure" data-depth="18">
+          <svg class="hero__arc" viewBox="0 0 600 600" aria-hidden="true">
+            <circle cx="300" cy="300" r="290" pathLength="1"/>
+            <path class="hero__spark" d="M0 -18C2 -6 6 -2 18 0C6 2 2 6 0 18C-2 6 -6 2 -18 0C-6 -2 -2 -6 0 -18Z" transform="translate(503 92)"/>
+            <path class="hero__spark hero__spark--sm" d="M0 -10C1 -3 3 -1 10 0C3 1 1 3 0 10C-1 3 -3 1 -10 0C-3 -1 -1 -3 0 -10Z" transform="translate(64 430)"/>
+          </svg>
+          <picture>
+            <source srcset="assets/img/portrait-cutout.webp" type="image/webp">
+            <img src="assets/img/portrait-cutout.png" width="860" height="951" alt="Portrait of Aiah Donald Moiwa" fetchpriority="high" data-portrait>
+          </picture>
+        </figure>
+
+        <!-- Outline copy of the title, drawn on top of the photo -->
+        <div class="hero__type hero__type--ghost" aria-hidden="true" data-depth="-14"><span class="hero__lines" id="heroGhost"></span></div>
+
+        <div class="hero__badge" id="heroBadge" data-anim="left" style="--t:9" hidden></div>
+
         <div class="hero__copy">
-          <p class="hero__name" data-bind="person.name">Aiah Donald Moiwa</p>
-          <h1 class="hero__title" id="heroTitle" data-bind="hero.headline">Engineering scalable solutions. Building meaningful digital experiences.</h1>
-          <p class="hero__intro" data-bind="hero.intro"></p>
-          <div class="hero__actions">
+          <p class="hero__intro" data-anim="up" style="--t:7" data-bind="hero.intro"></p>
+          <div class="hero__actions" data-anim="up" style="--t:8">
             <a class="btn btn--light" href="#projects">View my projects</a>
             <a class="btn btn--ghost-light" href="#contact">Let's connect</a>
             <a class="btn btn--ghost-light" data-resume download hidden>Download resume</a>
           </div>
-          <ul class="hero__social" id="heroSocial" aria-label="Profiles"></ul>
+          <ul class="hero__social" id="heroSocial" aria-label="Profiles" data-anim="up" style="--t:9"></ul>
         </div>
+      </div>
 
-        <div class="hero__visual">
-          <picture class="hero__portrait">
-            <source srcset="assets/img/portrait.webp" type="image/webp">
-            <img src="assets/img/portrait.jpg" width="900" height="1201" alt="Portrait of Aiah Donald Moiwa" fetchpriority="high" data-portrait>
-          </picture>
-          <ol class="swatches" id="heroCards" aria-label="At a glance"></ol>
-        </div>
+      <div class="wrap">
+        <ul class="hero__bar" id="heroCards" aria-label="At a glance"></ul>
       </div>
 
       <a class="hero__scroll" href="#about"><span class="sr-only">Scroll to About</span><span aria-hidden="true"></span></a>

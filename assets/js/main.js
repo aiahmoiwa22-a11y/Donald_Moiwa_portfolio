@@ -62,21 +62,72 @@
     `<li><a class="icon-link" href="mailto:${esc(C.person.email)}" aria-label="Email">${icon("mail")}</a></li>`;
 
   /* ---------------- Hero ---------------- */
-  $("[data-bind='hero.intro']").textContent = C.hero.intro;
-  // Each sentence of the headline starts on its own line.
-  $("#heroTitle").innerHTML = (C.hero.headline.match(/[^.!?]+[.!?]*/g) || [C.hero.headline])
-    .map((s) => `<span class="hero__line">${esc(s.trim())}</span>`).join(" ");
-  const portraitImg = $("[data-portrait]");
-  portraitImg.alt = C.person.portraitAlt;
+  const H = C.hero;
+  $("[data-bind='hero.intro']").textContent = H.intro;
+  $("[data-portrait]").alt = C.person.portraitAlt;
+  if (H.cutout) {
+    $(".hero__figure source").srcset = H.cutout + ".webp";
+    $("[data-portrait]").src = H.cutout + ".png";
+  }
 
-  const leaf = '<svg class="swatch__mark" viewBox="0 0 14 20" aria-hidden="true"><path d="M7 1C3 5 1.5 9 1.5 12.3a5.5 5.5 0 0 0 11 0C12.5 9 11 5 7 1Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 6v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
-  $("#heroCards").innerHTML = C.hero.cards
-    .filter((c) => !(c.key === "availability" && !C.person.showAvailability))
-    .map(
-      (c, i) => `<li class="swatch${c.key === "availability" ? " swatch--live" : ""}" style="--i:${i}">
-        ${leaf}<span class="swatch__value">${esc(c.value)}</span><strong class="swatch__label">${esc(c.label)}</strong></li>`
-    )
+  // Giant title: each letter in its own span so it can rise in.
+  let ci = 0;
+  const linesHtml = (H.bigTitle || [C.person.title])
+    .map((word, li) => `<span class="hero__line hero__line--${li + 1}">${[...word]
+      .map((ch) => `<span class="hero__char" style="--c:${ci++}">${ch === " " ? "&nbsp;" : esc(ch)}</span>`)
+      .join("")}</span>`)
     .join("");
+  $("#heroLines").innerHTML = linesHtml;
+  $("#heroGhost").innerHTML = linesHtml;
+
+  // Keep the outline copy exactly over the real title.
+  const realType = $(".hero__type:not(.hero__type--ghost)");
+  const ghost = $(".hero__type--ghost");
+  const placeGhost = () => ghost.style.setProperty("--ghost-top", realType.offsetTop + "px");
+  placeGhost();
+  window.addEventListener("resize", placeGhost);
+  document.fonts && document.fonts.ready.then(placeGhost);
+
+  if (H.badge && H.badge.show !== false) {
+    const b = $("#heroBadge");
+    b.innerHTML = `<small>${esc(H.badge.small)}</small><strong>${esc(H.badge.big)}</strong>${H.badge.note ? `<span>${esc(H.badge.note)}</span>` : ""}`;
+    b.hidden = false;
+  }
+
+  $("#heroCards").innerHTML = (H.cards || [])
+    .map((c, i) => `<li class="hero__cell" style="--i:${i}"><span class="hero__cell-ico">${icon(c.icon || "leaf")}</span>
+      <span><small>${esc(c.value)}</small><strong>${esc(c.label)}</strong></span></li>`)
+    .join("");
+
+  // Depth: on desktop the title and photo drift apart slightly with the
+  // pointer and with scroll. Off for touch devices and reduced motion.
+  if (!REDUCED && window.matchMedia("(hover: hover) and (min-width: 961px)").matches) {
+    const heroEl = $("#home");
+    const layers = $$("[data-depth]", heroEl);
+    const glow = $(".hero__glow");
+    let px = 0, py = 0, tx = 0, ty = 0, raf = 0;
+    const tick = () => {
+      tx += (px - tx) * 0.08; ty += (py - ty) * 0.08;
+      const sy = Math.min(window.scrollY, heroEl.offsetHeight);
+      layers.forEach((l) => {
+        const d = +l.dataset.depth;
+        const scrollShift = sy * (d < 0 ? 0.18 : -0.06);
+        l.style.transform = `translate3d(${tx * d}px, ${ty * d * 0.6 + scrollShift}px, 0)`;
+      });
+      raf = Math.abs(px - tx) > 0.001 || Math.abs(py - ty) > 0.001 ? requestAnimationFrame(tick) : 0;
+    };
+    const kick = () => { if (!raf) raf = requestAnimationFrame(tick); };
+    heroEl.addEventListener("pointermove", (e) => {
+      const r = heroEl.getBoundingClientRect();
+      px = (e.clientX - r.left) / r.width - 0.5;
+      py = (e.clientY - r.top) / r.height - 0.5;
+      glow.style.setProperty("--gx", (px + 0.5) * 100 + "%");
+      glow.style.setProperty("--gy", (py + 0.5) * 100 + "%");
+      kick();
+    });
+    heroEl.addEventListener("pointerleave", () => { px = 0; py = 0; kick(); });
+    window.addEventListener("scroll", kick, { passive: true });
+  }
 
   // Botanical texture: veins of a hosta leaf, drawn as long parallel curves.
   (function drawVeins() {
