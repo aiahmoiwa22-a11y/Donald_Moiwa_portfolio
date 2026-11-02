@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aiahmoiwa22-a11y.github.io/Donald_Moiwa_portfolio/sitemap.xml
