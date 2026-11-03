@@ -116,6 +116,18 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
 .brand__mark { width: 30px; height: 30px; color: var(--reseda); }
 .brand__name { font-family: var(--font-display); font-weight: 600; font-size: 1.12rem; letter-spacing: -0.01em; }
+/* DONALD TECH logo in the header. Colours follow the header: light-on-dark over the hero, dark-on-light once scrolled. */
+.brand__logo { display: block; height: 32px; width: auto; transition: color .3s var(--ease); }
+.brand__logo * { transition: fill .3s var(--ease), stroke .3s var(--ease); }
+.brand__logo-tile { fill: var(--sprout); }
+.brand__logo-mono { stroke: var(--dark-green); }
+.brand__logo-dot { fill: var(--fern); }
+.brand__logo-accent { stroke: var(--sprout); }
+.nav.is-solid .brand__logo-tile { fill: var(--pakistan); }
+.nav.is-solid .brand__logo-mono { stroke: var(--paper); }
+.nav.is-solid .brand__logo-dot { fill: var(--sprout); }
+.nav.is-solid .brand__logo-accent { stroke: var(--fern); }
+@media (max-width: 640px) { .brand__logo { height: 26px; } }
 
 /* ---------------- Navigation ---------------- */
 .nav {
@@ -191,6 +203,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   background:
     radial-gradient(60% 55% at 78% 38%, rgba(71, 112, 35, .42), transparent 70%),
     radial-gradient(50% 60% at 0% 100%, rgba(45, 83, 26, .5), transparent 70%),
+    linear-gradient(165deg, rgba(13, 51, 14, .82) 0%, rgba(7, 30, 7, .9) 60%),
+    var(--hero-photo, none) center 30% / cover no-repeat,
     linear-gradient(165deg, var(--pakistan) 0%, var(--dark-green) 60%);
   padding: calc(var(--nav-h) + clamp(12px, 3vh, 36px)) 0 clamp(20px, 3vh, 32px);
   --focus: var(--sprout);

@@ -55,8 +55,13 @@ window.PORTFOLIO = {
     headline: "Engineering scalable solutions. Building meaningful digital experiences.",
     intro:
       "I build modern web applications, work through complex problems, and care about software that is efficient, scalable and pleasant to use.",
+    // Photo behind the whole hero (a dark green tint is laid over it so the
+    // title stays readable). Use the full file name incl. extension. Set to "" for the plain green background.
+    background: "assets/img/hero-background.jpg",
     // Cut-out photo (transparent background) shown over the title.
-    cutout: "assets/img/portrait-cutout",
+    // Either a full file name ("assets/img/me.jpg") or a base name with matching
+    // .webp + .png files ("assets/img/portrait-cutout"). Also update index.html (preload + <img>) to match.
+    cutout: "assets/img/profile-cutout",
     // Badge on the right of the photo. Set `show: false` to hide it.
     badge: { show: true, small: "Available for", big: "Opportunities", note: "Based in Moscow" },
     // The strip along the bottom of the hero. icon = any name in icons.js.
@@ -204,6 +209,26 @@ window.PORTFOLIO = {
       live: "",
       caseStudy: {},
     },
+
+    {
+      id : "Eatquick Application",
+      title: "Eatquick Application",
+      category: "app",
+      status: " in progress",
+      image: "assets/img/eatquick-welcome-landscape_1.png",
+      imageFit: "cover",
+      imagePosition: "center 20%",
+      summary: "A mobile app for ordering food from local restaurants.",
+      problem: "People want to order food quickly and easily from their favorite local restaurants.",
+      solution: "A mobile app that allows users to browse menus, place orders, and pay for their food all in one place.",
+      features: ["Browse menus", "Place orders", "Pay for food"],
+      tech: ["React Native", "Node.js", "MongoDB"],
+      role: "Full-stack developer",
+      github: "",
+      live: "",
+      caseStudy: {},   
+    },
+
     {
       id: "portfolio",
       title: "This portfolio",

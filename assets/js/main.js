@@ -65,9 +65,20 @@
   const H = C.hero;
   $("[data-bind='hero.intro']").textContent = H.intro;
   $("[data-portrait]").alt = C.person.portraitAlt;
+  if (H.background) {
+    $("#home").style.setProperty("--hero-photo", `url("${new URL(H.background, document.baseURI).href}")`);
+  }
   if (H.cutout) {
-    $(".hero__figure source").srcset = H.cutout + ".webp";
-    $("[data-portrait]").src = H.cutout + ".png";
+    const source = $(".hero__figure source");
+    if (/\.\w+$/.test(H.cutout)) {
+      // Full file name given (e.g. "assets/img/me.jpg"): use just that file.
+      source?.remove();
+      $("[data-portrait]").src = H.cutout;
+    } else {
+      // Base name only: load name.webp, with name.png as the fallback.
+      if (source) source.srcset = H.cutout + ".webp";
+      $("[data-portrait]").src = H.cutout + ".png";
+    }
   }
 
   // Giant title: each letter in its own span so it can rise in.
