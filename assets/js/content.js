@@ -211,22 +211,38 @@ window.PORTFOLIO = {
     },
 
     {
-      id : "Eatquick Application",
-      title: "Eatquick Application",
-      category: "app",
-      status: " in progress",
+      id: "eatquick",
+      title: "EatQuick",
+      category: "web",
+      status: "Live pilot",
       image: "assets/img/eatquick-welcome-landscape_1.png",
       imageFit: "cover",
       imagePosition: "center 20%",
-      summary: "A mobile app for ordering food from local restaurants.",
-      problem: "People want to order food quickly and easily from their favorite local restaurants.",
-      solution: "A mobile app that allows users to browse menus, place orders, and pay for their food all in one place.",
-      features: ["Browse menus", "Place orders", "Pay for food"],
-      tech: ["React Native", "Node.js", "MongoDB"],
+      summary:
+        "A food-ordering and delivery web app for Freetown, Sierra Leone, with separate areas for customers, restaurants, riders and admin.",
+      problem:
+        "In Freetown, ordering food usually means phoning a restaurant and arranging delivery yourself. Restaurants have no simple way to take orders online, and there is no shared system for riders.",
+      solution:
+        "One web app that works on a phone browser: customers order from restaurants in their area and pay cash on delivery, restaurants manage menus and orders on a live dashboard, riders take delivery jobs, and an admin team handles dispatch and finance.",
+      features: [
+        "Browse restaurants and menus by delivery area",
+        "Cart and checkout, cash on delivery",
+        "Phone-number sign-in with a one-time code",
+        "Restaurant dashboard with a live order board and menu photo upload",
+        "Rider delivery jobs and admin dispatch",
+        "Restaurant and rider applications, approved by admin",
+        "Promo codes, credit and finance reports",
+      ],
+      tech: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Vercel"],
       role: "Full-stack developer",
       github: "",
-      live: "",
-      caseStudy: {},   
+      live: "https://eatquicksl.vercel.app",
+      caseStudy: {
+        architecture:
+          "Next.js and TypeScript front end hosted on Vercel, with a Supabase back end: a PostgreSQL database with row-level security rules, so each customer, restaurant, rider and admin can only see their own data. Prices and order rules are checked on the server, not only in the browser.",
+        results:
+          "Running as a pilot on its own live address. Real SMS codes and online payments are the next steps before opening it to customers.",
+      },
     },
 
     {
